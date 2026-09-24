@@ -15,18 +15,19 @@ def bmi(weight_kg, height_m):
     bmi = round(bmi, 1)
     return bmi
 
-option = int(input("Please enter your selection:" \
-"1. Print Header" \
-"2. Hrs to Mins conversion" \
-"3. Is Number even?" \
-"4. BMI Calculation"))
+option = int(input("Please enter your selection: \n 1. Print Header \n 2. Hrs to Mins conversion \n 3. Is Number even? \n 4. BMI Calculation \n"))
 if option == 1:
     subject = input("Input your subject: ")
     print_header(subject)
 elif option == 2:
-    num = input("Input the amount of time in hours: ")
-    convert_to_minutes(num)
+    num = int(input("Input the amount of time in hours: "))
+    print("The amount of time in minutes is: ", convert_to_minutes(num))
 elif option == 3:
-    weight = input("Input your weight in KG: ")
-    height = input("Input your hight in metres: ")
-    bmi(weight, height)
+    number = int(input("Input a number: "))
+    is_even(number)
+elif option == 4:
+    weight = int(input("Input your weight in kg: "))
+    height = int(input("Input your height in m: "))
+    print("Your BMI is: ", bmi(weight, height))
+else:
+    print("Invalid selection")
